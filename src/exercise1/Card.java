@@ -30,6 +30,11 @@ public class Card {
         this.suit = suit;
     }
 
+    public Card(String suit, int value) {
+        this.suit = suit;
+        this.value = value;
+    }
+
     /**
      * @return the value
      */
