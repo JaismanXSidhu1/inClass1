@@ -28,10 +28,10 @@ public class CardTrick {
         
         
         Card[] hand = new Card[7];
-        hand[0] = new Card("Ace", 1);
-        hand[1] = new Card("Jack", 11);
-        hand[2] = new Card("Queen", 12);
-        hand[3] = new Card("King", 13);
+        hand[0] = new Card("Hearts", 1);
+        hand[1] = new Card("Diamonds", 11);
+        hand[2] = new Card("Spades", 12);
+        hand[3] = new Card("Clubs", 13);
         
         
         
