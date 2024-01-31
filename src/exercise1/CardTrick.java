@@ -3,85 +3,45 @@ package exercise1;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
- * It then searches the array of cards for the match to the user's card. 
- * To be used as starting code in Exercise
- *
- * @author Jaisman Singh Sidhu
- * @author Paul Bonenfant Jan 25, 2022 
- */
 public class CardTrick {
-    
+
     public static void main(String[] args) {
         
-        Random random = new Random();
-        int compGuess = random.nextInt(14);
-        System.out.println(compGuess);
-        
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter your guess: ");
-        int userInput = input.nextInt();
-        
-        
-        
-        
-        
+        Random random = new Random();
+
         Card[] hand = new Card[7];
-        hand[0] = new Card("Hearts", 1);
-        hand[1] = new Card("Diamonds", 11);
-        hand[2] = new Card("Spades", 12);
-        hand[3] = new Card("Clubs", 13);
-        hand[4] = new Card("Clubs", 5);
-        hand[5] = new Card("Diamonds", 10);
-        hand[6] = new Card("Hearts", 4);
-        
-        
-        
-        
-        
-        
-        
-        
         for (int i = 0; i < hand.length; i++) {
-            if (userInput == compGuess){
-                hand[i].getValue();
-                hand[i].getSuit();
-                printInfo();
-                break;
-                
-                
-      
-            }else{
-                System.out.println("Wrong guess");
-                break;
-            }
-    
-            
-            //card.setValue(insert call to random number generator here)
-            // 
-            //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
-            //       Don't worry about duplicates at this point
+            int value = random.nextInt(13) + 1; 
+            String suit = Card.SUITS[random.nextInt(Card.SUITS.length)]; // Random suit
+            hand[i] = new Card(suit, value);
         }
 
-        // insert code to ask the user for Card value and suit, create their card
-        // and search the hand here. 
-        // Hint: You can ask for values 1 to 10, and then
-        //       11 for jack, 12 for queen, etc. (remember arrays are 0-based though)
-        //       1 for Hearts, 2 for Diamonds, etc. (remember arrays are 0-based though)
-        // 
-        // Then loop through the cards in the array to see if there's a match.
         
-        // If the guess is successful, invoke the printInfo() method below.
+        System.out.println("Enter a card value (1-13): ");
+        int userValue = input.nextInt();
+
+        input.nextLine(); 
+
+        System.out.println("Enter a suit (Hearts, Diamonds, Spades, Clubs): ");
+        String userSuit = input.nextLine();
+
         
+        boolean guessed = false;
+        for (Card card : hand) {
+            if (card.getValue() == userValue && card.getSuit().equals(userSuit)) {
+                guessed = true;
+                break;
+            }
+        }
+
+        if (guessed) {
+            printInfo();
+        } else {
+            System.out.println("Wrong guess");
+        }
     }
 
-    /**
-     * A simple method to print out personal information. Follow the instructions to 
-     * replace this information with your own.
-     * @author Paul Bonenfant Jan 2022
-     */
     private static void printInfo() {
         // i am done
     
