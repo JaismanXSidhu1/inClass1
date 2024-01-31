@@ -84,7 +84,7 @@ public class CardTrick {
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
-        System.out.println("My name is Paul, but you can call me prof, Paul or sir");
+        System.out.println("My name is Jaisman Singh Sidhu, but you can call me prof, Jerry or sir");
         System.out.println();
         
         System.out.println("My career ambitions:");
@@ -94,7 +94,7 @@ public class CardTrick {
 
         System.out.println("My hobbies:");
         System.out.println("-- Investing");
-        System.out.println("-- Cooking");
+        System.out.println("-- Sleeping");
         System.out.println("-- Reading/Watching TV");
         System.out.println("-- Riding my motorcycle");
 
