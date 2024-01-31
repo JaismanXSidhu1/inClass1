@@ -32,6 +32,9 @@ public class CardTrick {
         hand[1] = new Card("Diamonds", 11);
         hand[2] = new Card("Spades", 12);
         hand[3] = new Card("Clubs", 13);
+        hand[4] = new Card("Clubs", 5);
+        hand[5] = new Card("Diamonds", 10);
+        hand[6] = new Card("Hearts", 4);
         
         
         
@@ -80,6 +83,7 @@ public class CardTrick {
      * @author Paul Bonenfant Jan 2022
      */
     private static void printInfo() {
+        // i am done
     
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
